@@ -13,7 +13,7 @@ const path         = require('path');
 mongoose
   .connect('mongodb://localhost/front', {useNewUrlParser: true})
   .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}" at port "${x.connections[0].port}"`)
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)
