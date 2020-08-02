@@ -40,6 +40,7 @@ app.use(require('node-sass-middleware')({
       
 
 app.set('views', path.join(__dirname, 'views'));
+app.set('css', path.join(__dirname, 'css'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
@@ -47,7 +48,9 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Express - THB-Online';
+
+
 
 
 
